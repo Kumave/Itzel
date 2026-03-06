@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>🫐𓋼 FINANSAS 𓋼🫐</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🫐𓋼 FINANSAS 𓋼🫐</h1>
+</header>
+
+<main>
+
+    <!-- FORMULARIO -->
+    <section class="form-section">
+        <h2>Agregar Movimiento</h2>
+        <form id="formMovimiento">
+            <input type="text" id="descripcion" placeholder="Descripción" required>
+            <input type="number" id="monto" placeholder="Monto" required>
+
+            <select id="tipo">
+                <option value="ingreso">Ingreso</option>
+                <option value="gasto">Gasto</option>
+            </select>
+
+            <select id="categoria">
+                <option value="Comida">Comida</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Entretenimiento">Entretenimiento</option>
+                <option value="Salario">Salario</option>
+                <option value="Servicios">Servicios</option>
+                <option value="Salud">Salud</option>
+            </select>
+
+            <button type="submit">Agregar Movimiento</button>
+        </form>
+    </section>
+
+    <!-- RESUMEN -->
+    <section class="resumen-section">
+        <h2>Resumen</h2>
+        <p>Saldo: $<span id="saldo">0</span></p>
+        <p>Total Ingresos: $<span id="totalIngresos">0</span></p>
+        <p>Total Gastos: $<span id="totalGastos">0</span></p>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filtros">
+        <button onclick="mostrarMovimientos('todos')">Todos</button>
+        <button onclick="mostrarMovimientos('ingreso')">Solo Ingresos</button>
+        <button onclick="mostrarMovimientos('gasto')">Solo Gastos</button>
+        <button onclick="borrarTodos()">Borrar Todos</button>
+    </section>
+
+    <!-- LISTA -->
+    <section>
+        <h2>Movimientos</h2>
+        <ul id="listaMovimientos"></ul>
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
